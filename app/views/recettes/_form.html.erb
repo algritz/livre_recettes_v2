@@ -1,0 +1,73 @@
+<%= form_for(@recette) do |f| %>
+  <% if @recette.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recette.errors.count, "error") %> prohibited this recette from being saved:</h2>
+
+      <ul>
+      <% @recette.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :author_id %><br />
+    <%= f.number_field :author_id %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.number_field :category_id %>
+  </div>
+  <div class="field">
+    <%= f.label :preparation_time %><br />
+    <%= f.text_field :preparation_time %>
+  </div>
+  <div class="field">
+    <%= f.label :marinade_time %><br />
+    <%= f.text_field :marinade_time %>
+  </div>
+  <div class="field">
+    <%= f.label :cooking_time %><br />
+    <%= f.text_field :cooking_time %>
+  </div>
+  <div class="field">
+    <%= f.label :portion %><br />
+    <%= f.text_field :portion %>
+  </div>
+  <div class="field">
+    <%= f.label :ingredient %><br />
+    <%= f.text_area :ingredient %>
+  </div>
+  <div class="field">
+    <%= f.label :instruction %><br />
+    <%= f.text_area :instruction %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </div>
+  <div class="field">
+    <%= f.label :tip %><br />
+    <%= f.text_area :tip %>
+  </div>
+  <div class="field">
+    <%= f.label :suggested_meal %><br />
+    <%= f.text_field :suggested_meal %>
+  </div>
+  <div class="field">
+    <%= f.label :suggested_wine %><br />
+    <%= f.text_area :suggested_wine %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
