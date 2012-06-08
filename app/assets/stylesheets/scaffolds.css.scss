@@ -54,3 +54,8 @@ div {
   ul li {
     font-size: 12px;
     list-style: square; } }
+.actions {
+  a {
+    @include button(simple, #c3c3c3)
+  }
+}

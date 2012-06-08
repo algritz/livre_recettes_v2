@@ -68,6 +68,6 @@
     <%= f.text_area :suggested_wine %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= link_to "Soumettre", "#", :onclick=>"$('form').submit()" %>
   </div>
 <% end %>
