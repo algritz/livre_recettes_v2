@@ -3,25 +3,45 @@ body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px; }
+  line-height: 18px; 
 
+h1 {
+@include background-image(linear-gradient(hsla(1, 100%, 100%, 1) 0%, hsla(1, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#666666, darken(#666666, 10%)));
+padding-top:15px;
+padding-left:15px;
+padding-bottom:15px;
+color:#cccccc;
+}
+}
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
+
+td{
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right:5px;
+  text-align:left;
+}
+
+th {
+  @include background-image(linear-gradient(hsla(1, 100%, 100%, 1) 0%, hsla(1, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(#cccccc, darken(#cccccc, 10%)));
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right:5px;
+  text-align:left;
+  color:#666666;
+}
 
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px; }
 
-a {
-  color: #000;
-  &:visited {
-    color: #666; }
-  &:hover {
-    color: #fff;
-    background-color: #000; } }
+
 
 div {
   &.field, &.actions {
@@ -54,8 +74,23 @@ div {
   ul li {
     font-size: 12px;
     list-style: square; } }
+
 .actions {
   a {
-    @include button(simple, #c3c3c3)
+    @include button(simple, #999967);
   }
+}
+.cancel {
+   a {
+     @include button(simple, #ff0000)
+   }
+    
+  }
+.nouvelle {
+  text-align:center;
+  vertical-align:center;
+  a {
+    @include button(simple, #999967)
+  }
+  
 }
