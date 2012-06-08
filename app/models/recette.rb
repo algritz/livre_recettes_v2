@@ -5,4 +5,7 @@ class Recette < ActiveRecord::Base
   validates :category_id, :presence => true
   validates :ingredient, :presence => true
   validates :instruction, :presence => true
+  
+  belongs_to :user
+  
 end

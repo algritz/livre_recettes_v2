@@ -3,19 +3,8 @@
 <table>
 	<tr>
 		<th>Title</th>
-		<th>Source</th>
 		<th>Author</th>
 		<th>Category</th>
-		<th>Preparation time</th>
-		<th>Marinade time</th>
-		<th>Cooking time</th>
-		<th>Portion</th>
-		<th>Ingredient</th>
-		<th>Instruction</th>
-		<th>Note</th>
-		<th>Tip</th>
-		<th>Suggested meal</th>
-		<th>Suggested wine</th>
 		<th colspan="3">
 		<div class="nouvelle">
 			<%= link_to 'Nouvelle Recette', new_recette_path %>
@@ -26,19 +15,8 @@
 	<% @recettes.each do |recette| %>
 	<tr>
 		<td><%= recette.title %></td>
-		<td><%= recette.source %></td>
 		<td><%= recette.author_id %></td>
 		<td><%= recette.category_id %></td>
-		<td><%= recette.preparation_time %></td>
-		<td><%= recette.marinade_time %></td>
-		<td><%= recette.cooking_time %></td>
-		<td><%= recette.portion %></td>
-		<td><%= recette.ingredient %></td>
-		<td><%= recette.instruction %></td>
-		<td><%= recette.note %></td>
-		<td><%= recette.tip %></td>
-		<td><%= recette.suggested_meal %></td>
-		<td><%= recette.suggested_wine %></td>
 		<td class="actions"><%= link_to 'Show', recette %></td>
 		<td class="actions"><%= link_to 'Edit', edit_recette_path(recette) %></td>
 		<td class="actions"><%= link_to 'Destroy', recette, confirm: 'Are you sure?', method: :delete %></td>

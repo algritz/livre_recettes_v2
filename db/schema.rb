@@ -11,12 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120607180755) do
+ActiveRecord::Schema.define(:version => 20120608200250) do
 
   create_table "recettes", :force => true do |t|
     t.string   "title",            :null => false
     t.string   "source"
-    t.integer  "author_id",        :null => false
     t.integer  "category_id",      :null => false
     t.string   "preparation_time"
     t.string   "marinade_time"
@@ -32,7 +31,6 @@ ActiveRecord::Schema.define(:version => 20120607180755) do
     t.datetime "updated_at",       :null => false
   end
 
-  add_index "recettes", ["author_id"], :name => "index_recettes_on_author_id"
   add_index "recettes", ["category_id"], :name => "index_recettes_on_category_id"
   add_index "recettes", ["title"], :name => "index_recettes_on_title"
 
@@ -49,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20120607180755) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
